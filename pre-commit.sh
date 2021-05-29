@@ -11,7 +11,7 @@ fi
 
 git config --global url."git@bitbucket.org:".insteadOf "https://bitbucket.org/"
 
-GO111MODULE=on go get -u -t github.com/golangci/golangci-lint/cmd/golangci-lint
+GO111MODULE=off go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
 golangci-lint run --tests=false --skip-files=mock.go --disable=goimports --enable-all
 
 exit $?
